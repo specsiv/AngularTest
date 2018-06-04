@@ -1,0 +1,141 @@
+.menuBorder{
+  border: black solid 2px;
+  border-radius: 5px;
+}
+
+.menuBorder:hover{
+  color: white;
+  background-color: rgba(150,150,150,0.75);
+
+  animation-name: borderHover;
+  animation-duration: 0.25s;
+}
+
+#menuSection{
+  margin: 10px 0px;
+}
+
+#itemsGrid{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-gap: 9px;
+}
+
+.itemBlock{
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 17.5px;
+}
+
+.itemImg{
+  padding: 25px 0px;
+}
+
+.articleText{
+  text-align: left;
+  margin-left: 5%;
+}
+
+.articleGrid{
+  display: grid;
+  grid-template-columns: 70% auto;
+  grid-gap: 10px;
+}
+
+.plusBtn{
+  height: 50px;
+  width: 50px;
+  margin: 0% auto;
+  background-color: rgba(200,0,0,0.75);
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: bold;
+
+  border: rgba(200,0,0,0.75) solid 1px;
+  border-radius: 5px;
+}
+
+.plusBtn:hover{
+  border-color: rgba(255,255,255,1);
+
+  animation-name: plusBtnHover;
+  animation-duration: 0.25s;
+}
+
+#sidebarMenu {
+  height: 50%;
+  top: 25%;
+  right: 0;
+  text-align: center;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.sidebarGrid {
+  display: grid;
+  grid-template-columns: 80% auto;
+}
+
+.sidebarMenuOpened {
+  width: 160px;
+
+  animation-name: sidebarMenuOpen;
+  animation-duration: 1s;
+}
+
+.sidebarMenuClosed {
+  width: 0px;
+
+  animation-name: sidebarMenuClose;
+  animation-duration: 1s;
+}
+
+.sidebarMenuFirstAppear {
+  width: 0px;
+}
+
+#sidebarImg {
+  width: 50px;
+}
+
+
+@keyframes borderHover {
+  from {
+    color: black;
+    background-color: white;
+  }
+  to {
+    background-color: rgba(150,150,150,0.75);
+    color: white;
+  }
+}
+
+@keyframes plusBtnHover {
+  from {
+    border-color: rgba(200,0,0,0.75);
+  }
+  to {
+    border-color: rgba(255,255,255,1);
+  }
+}
+
+@keyframes sidebarMenuOpen {
+  from {
+    width: 0;
+  }
+  to {
+    width: 160px;
+  }
+}
+
+@keyframes sidebarMenuClose {
+  from {
+    width: 160px;
+  }
+  to {
+    width: 0;
+  }
+}

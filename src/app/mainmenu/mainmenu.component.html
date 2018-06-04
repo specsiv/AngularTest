@@ -1,0 +1,41 @@
+<section id="menuSection">
+  <article id="itemsGrid">
+    <div class="itemBlock menuBorder specCursor" *ngFor="let item of items" (click)="itemClick(item.id)">
+      <img class="itemImg" src="../../assets/angular.png" width="60%">
+
+      <div>
+        <h2>{{item.name}}</h2>
+        <hr>
+        <h4 class="articleText">Описание:</h4>
+
+        <div class="articleGrid">
+          <p class="articleText">
+            Вес: {{item.weight}}
+            <br>
+            Цена: {{item.price}}
+          </p>
+
+          <button class="plusBtn specCursor" (mouseenter)="clickFlag = false" (mouseleave)="clickFlag = true" (click)="addToBasket(item.id)">
+              +
+          </button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <aside>
+    <div id="sidebarMenu" class="sidebarMenuBorder" [ngClass]="{'sidebarMenuClosed': !firstSidebarAppear && !sidebarFlag, 'sidebarMenuFirstAppear': !sidebarFlag,
+         'sidebarMenuOpened': sidebarFlag}">
+      <img id="sidebarImg" class="itemImg specCursor" src="../../assets/basket.png" width="25%" routerLink="/basket">
+
+      <div class="specCursor" routerLink="/basket">{{getBasketInfo()}}</div>
+
+      <div id="sidebarMenuItemsBlock" class="specCursor">
+        <div class="sidebarGrid sidebarMenuItem sidebarMenuBorder" *ngFor="let item of basketItems; let i = index">
+          <div class="sidebarMenuItemData sidebarData" routerLink="/item/{{item.item.id}}">{{item.item.name}}:{{item.count}}</div>
+          <div class="sidebarMenuItemButton" (click)="removeFromBasket(i + 1)">x</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</section>

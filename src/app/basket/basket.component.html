@@ -1,0 +1,46 @@
+<section id="basketSection">
+  <div id="itemsGrid">
+    <div id="listOfItems" class="specCursor">
+      <div id="sidebarGrid" class="sidebarMenuItem sidebarMenuBorder" *ngFor="let item of items; let i = index">
+        <img class="sidebarMenuItemImg" src="../../assets/angular.png" width="100%">
+        <div class="sidebarMenuItemData itemData" routerLink="/item/{{item.item.id}}">{{item.item.name}}:{{item.count}}</div>
+        <div class="sidebarMenuItemButton itemButton itemPlus" (click)="addToBasket(item, i + 1)">+</div>
+        <div class="sidebarMenuItemButton itemButton" (click)="removeFromBasket(i + 1)">-</div>
+      </div>
+    </div>
+
+    <div id="advBlock">
+      <h3>Возможно, вам будет интересно:</h3>
+
+      <div id="advContent" class="border">
+        <img src="../../assets/angular.png" width="80%">
+
+        <div id="advGrid">
+          <div class="sidebarMenuItem advButton" (click)="changeAdvItem(0)"><</div>
+          <span id="advData">{{advItem.name}}</span>
+          <div class="sidebarMenuItem advButton" (click)="changeAdvItem(1)">></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="orderSection">
+  <h3 id="orderLogo">Сделать заказ</h3>
+
+  <div id="orderGrid">
+    <div>
+      <p>
+        <input class="stdInput" [(ngModel)]="fio">
+        <label>ФИО</label>
+      </p>
+
+      <p>
+        <input class="stdInput">
+        <label>Номер телефона</label>
+      </p>
+    </div>
+
+    <div id="orderButton" class="sidebarMenuItem sidebarMenuItemImg" (click)="makeOrder()">Заказать</div>
+  </div>
+</section>

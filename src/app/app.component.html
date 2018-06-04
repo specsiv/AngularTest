@@ -1,0 +1,12 @@
+<h1 id="mainHeader">Saint Angular</h1>
+<div id="menu">
+  <nav id="leftMenuPart">
+    <a class="menuItem" routerLink="/mainmenu" (click)="menuItemId = 1" [ngClass]="{'active': menuItemId === 1}">Меню</a>
+    <a class="menuItem" routerLink="/basket" (click)="menuItemId = 2" [ngClass]="{'active': menuItemId === 2}">Заказ</a>
+  </nav>
+  <nav id="rightMenuPart" *ngIf="menuItemId === 1">
+    <a class="menuItem" (click)="sidebarFlag = !sidebarFlag;" [ngClass]="{'active': sidebarFlag}">Корзина</a>
+  </nav>
+</div>
+
+<router-outlet></router-outlet>

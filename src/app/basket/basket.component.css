@@ -1,0 +1,107 @@
+.border {
+  border: black solid 1px;
+  border-radius: 5px;
+}
+
+#itemsGrid {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-gap: 10px;
+
+  margin: 10px 0;
+  padding: 0;
+}
+
+#sidebarGrid {
+  display: grid;
+  grid-template-columns: 10% 75% 7.5% auto;
+}
+
+.itemData {
+  font-size: 150%;
+}
+
+.itemButton {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.itemPlus {
+  padding-top: 5px;
+}
+
+#listOfItems {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.listItem{
+  padding-left: 10px;
+}
+
+#advBlock {
+  text-align: center;
+}
+
+#advContent {
+  margin: auto;
+  width: 50%;
+}
+
+#advGrid {
+  display: grid;
+  grid-template-columns: 20% 60% auto;
+
+  margin: 0;
+  padding: 0;
+}
+
+.advButton {
+  padding: 10px 0;
+  border-width: 0;
+
+  font-size: 130%;
+}
+
+.advButton:hover {
+  color: white;
+}
+
+#advData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-size: 100%;
+}
+
+#orderLogo {
+  margin-top: 50px;
+  padding-top: 50px;
+
+  border-top: 1px solid #ccc;
+}
+
+#orderGrid {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+#orderButton {
+  margin: auto;
+  text-align: center;
+
+  border: none;
+  border-bottom: 1px solid #ccc;
+
+  width: 50%;
+  height: 50%;
+}
+
+#orderButton:hover {
+  color: white;
+}

@@ -1,0 +1,110 @@
+/*кастомный скролл*/
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200,0,0,0.75);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(200, 0, 0, 1);
+}
+
+/*отключение стандартного выделения при фокусе*/
+
+div:focus, button:focus, img:focus, li:focus{
+  outline: none;
+}
+
+/*изменение курсора при наведении на кликабельный объект*/
+
+.specCursor:hover {
+  cursor: pointer;
+}
+
+/*кастомный сайдбар*/
+
+#sidebarMenuItemsBlock {
+  margin-top: 10px;
+}
+
+.sidebarMenuItem {
+  border: rgba(150,150,150,0.75) solid 1px;
+  border-radius: 5px;
+}
+
+.sidebarMenuItem:hover {
+  border-color: rgba(200,0,0,0.75);
+  background-color: rgba(200,0,0,0.75);
+
+  animation-name: sidebarMenuItemHover;
+  animation-duration: 0.5s;
+}
+
+.sidebarMenuItemImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebarMenuItemData {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: left;
+  padding-left: 10px;
+
+  /*font-size: 150%;*/
+}
+
+.sidebarMenuItemButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+  border-radius: 5px;
+
+  /*font-size: 200%;*/
+  /*font-weight: bold;*/
+}
+
+.sidebarMenuItemButton:hover {
+  color: black;
+  background-color: white;
+}
+
+.sidebarMenuBorder{
+  background-color: rgba(150,150,150,0.75);
+  border-radius: 5px;
+}
+
+.sidebarMenuBorder:hover{
+  color: white;
+}
+
+@keyframes sidebarMenuItemHover {
+  from{
+    background-color: rgba(150,150,150,0.75);
+    border-color: rgba(150,150,150,0.75);
+  }
+  to {
+    background-color: rgba(200,0,0,0.75);
+    border-color: rgba(200,0,0,0.75);
+  }
+}
+
+.stdInput {
+  margin: 0;
+  padding: 8px 0;
+  display: block;
+  width: 80%;
+
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
